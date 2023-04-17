@@ -11,7 +11,6 @@ In order to control the robot using the baseStation there a few setup steps need
     - Most common controller types are accepted *(Tested: DS4, Xbox 360)*
 3. Ensure that the robot `teleop.py` program has been started on the robot
     - See [CARL](https://github.com/M2I-CYSAR/carl#readme) for further details
-    - ***This is not currently tested. The order may be reversed***
 
 **WARNING: Once the next step is run the robot will attempt to react to Joystick inputs. Do not continue if this not desired**
 
