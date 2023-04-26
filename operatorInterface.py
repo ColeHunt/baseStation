@@ -22,17 +22,25 @@ while True:
     pygame.event.pump()
 
     # Get controller input values
-    axis_x = joystick.get_axis(0)
-    axis_y = joystick.get_axis(1)
+    l_axis_x = joystick.get_axis(0)
+    l_axis_y = joystick.get_axis(1)
+    r_axis_x = joystick.get_axis(2)
+    r_axis_y = joystick.get_axis(3)
     button_a = joystick.get_button(0)
     button_b = joystick.get_button(1)
+    button_x = joystick.get_button(2)
+    button_y = joystick.get_button(3)
 
     # Convert input values to bytes
     data = bytearray()
-    data.append(int(axis_x * 127 + 127))
-    data.append(int(axis_y * 127 + 127))
+    data.append(int(l_axis_x * 127 + 127))
+    data.append(int(l_axis_y * 127 + 127))
+    data.append(int(r_axis_x * 127 + 127))
+    data.append(int(r_axis_y * 127 + 127))
     data.append(button_a)
     data.append(button_b)
+    data.append(button_x)
+    data.append(button_y)
 
     # Send data over TCP socket
     sock.sendall(data)
