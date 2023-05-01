@@ -24,8 +24,8 @@ while True:
     # Get controller input values
     l_axis_x = joystick.get_axis(0)
     l_axis_y = joystick.get_axis(1)
-    r_axis_x = joystick.get_axis(2)
-    r_axis_y = joystick.get_axis(3)
+    r_axis_x = joystick.get_axis(3)
+    r_axis_y = joystick.get_axis(4)
     button_a = joystick.get_button(0)
     button_b = joystick.get_button(1)
     button_x = joystick.get_button(2)
