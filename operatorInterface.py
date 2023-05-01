@@ -30,6 +30,7 @@ while True:
     button_b = joystick.get_button(1)
     button_x = joystick.get_button(2)
     button_y = joystick.get_button(3)
+    button_start = joystick.get_button(7)
 
     # Convert input values to bytes
     data = bytearray()
@@ -41,6 +42,7 @@ while True:
     data.append(button_b)
     data.append(button_x)
     data.append(button_y)
+    data.append(button_start)
 
     # Send data over TCP socket
     sock.sendall(data)
