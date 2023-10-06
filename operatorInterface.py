@@ -5,7 +5,7 @@ import socket
 import time
 
 # Define IP address and port number of the TCP server
-TCP_IP = 'cysar.local'
+TCP_IP = '2610:130:110:1525:47e7:9414:7e67:15e4'
 TCP_PORT = 4143
 
 # Initialize pygame and the Xbox controller
