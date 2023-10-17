@@ -26,8 +26,6 @@ while True:
     l_axis_y = joystick.get_axis(1)
     r_axis_x = joystick.get_axis(3)
     r_axis_y = joystick.get_axis(4)
-    leftTrigger = joystick.get_axis(2)
-    rightTrigger = joystick.get_axis(5)
     button_a = joystick.get_button(0)
     button_b = joystick.get_button(1)
     button_x = joystick.get_button(2)
@@ -35,6 +33,8 @@ while True:
     button_start = joystick.get_button(7)
     leftBumper = joystick.get_button(4)
     rightBumper = joystick.get_button(5)
+    leftTrigger = joystick.get_axis(2)
+    rightTrigger = joystick.get_axis(5)
 
     # Convert input values to bytes
     data = bytearray()
