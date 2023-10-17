@@ -42,8 +42,6 @@ while True:
     data.append(int(l_axis_y * 127 + 127))
     data.append(int(r_axis_x * 127 + 127))
     data.append(int(r_axis_y * 127 + 127))
-    data.append(int(leftTrigger * 127 + 127))
-    data.append(int(rightTrigger * 127 + 127))
     data.append(button_a)
     data.append(button_b)
     data.append(button_x)
@@ -51,6 +49,8 @@ while True:
     data.append(button_start)
     data.append(leftBumper)
     data.append(rightBumper)
+    data.append(int(leftTrigger * 127 + 127))
+    data.append(int(rightTrigger * 127 + 127))
 
     # Send data over TCP socket
     sock.sendall(data)
