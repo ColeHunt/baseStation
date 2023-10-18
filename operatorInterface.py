@@ -49,8 +49,8 @@ while True:
     data.append(button_start)
     data.append(leftBumper)
     data.append(rightBumper)
-    data.append(int(leftTrigger * 127))
-    data.append(int(rightTrigger * 127))
+    data.append(int(leftTrigger * 127 + 127))
+    data.append(int(rightTrigger * 127 + 127))
 
     # Send data over TCP socket
     sock.sendall(data)
