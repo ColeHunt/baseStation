@@ -36,12 +36,12 @@ while True:
     leftTrigger = joystick.get_axis(2) #11
     rightTrigger = joystick.get_axis(5) #12
     # TODO: Add input values
-    leftTrigger_down = joystick.get_button() #13
-    rightTrigger_down = joystick.get_button() #14
-    button_back = joystick.get_button() #15
-    button_xbox = joystick.get_button() #16
-    d_pad_x = joystick.get_hat() #17
-    d_pad_y = joystick.get_hat() #18
+    leftStick_down = joystick.get_button(9) #13
+    rightStick_down = joystick.get_button(10) #14
+    button_back = joystick.get_button(6) #15
+    button_xbox = joystick.get_button(8) #16
+    d_pad = joystick.get_hat(0) #17
+   
 
     # Convert input values to bytes
     data = bytearray()
@@ -58,6 +58,12 @@ while True:
     data.append(rightBumper) #10
     data.append(int(leftTrigger * 127 + 127)) #11
     data.append(int(rightTrigger * 127 + 127)) #12
+    data.append(leftStick_down) #13
+    data.append(rightStick_down) #14
+    data.append(button_back) #15
+    data.append(button_xbox) #16
+    data.append(int(d_pad * 127 + 127)) #17
+   
     # TODO: Add additional controller inputs
 
     # Send data over TCP socket
