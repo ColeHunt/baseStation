@@ -14,7 +14,7 @@ joystick = pygame.joystick.Joystick(0)
 joystick.init()
 
 # Create a TCP socket and connect to the server
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
 sock.connect((TCP_IP, TCP_PORT))
 
 # Loop to continuously send Xbox controller data
