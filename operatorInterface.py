@@ -69,6 +69,7 @@ while True:
     data.append(d_pad_left) # 19
     data.append(d_pad_right) # 20
 
+    print(str(data))
 
     # Send data over TCP socket
     sock.sendall(data)
